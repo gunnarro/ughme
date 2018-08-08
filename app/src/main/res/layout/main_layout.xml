@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/coordinatorLayout"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context="com.gunnarro.android.ughme.view.MainActivity">
+
+	<android.support.design.widget.AppBarLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+		<!--
+		<android.support.v7.widget.Toolbar
+			android:id="@+id/toolbar"
+			android:layout_width="match_parent"
+			android:layout_height="?attr/actionBarSize"
+			android:background="?attr/colorPrimary"
+			app:layout_scrollFlags="scroll|enterAlways"
+			app:popupTheme="@style/ThemeOverlay.AppCompat.Dark">
+
+		</android.support.v7.widget.Toolbar>
+		-->
+	</android.support.design.widget.AppBarLayout>
+
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:paddingLeft="20dp"
+		android:paddingRight="20dp"
+		app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+		<Spinner
+			android:id="@+id/contacts_spinner"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="10dp">
+			<requestFocus/>
+		</Spinner>
+
+		<EditText
+			android:id="@+id/mobile_number"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="10dp"
+			android:digits="1234567890"
+			android:hint="mobile number"
+			android:inputType="phone"
+			android:singleLine="true" />
+
+		<Button
+			android:id="@+id/test_gotcha"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="10dp"
+			android:text="Get Location" />
+
+		<Button
+			android:id="@+id/show_my_location"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="10dp"
+			android:text="View My Location" />
+
+		<Button
+			android:id="@+id/test_send_mail"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="10dp"
+			android:text="Forward sms inbox" />
+
+		<Button
+			android:id="@+id/copy_to_clipboard"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="10dp"
+			android:text="Copy Sms clipboard" />
+
+		<TextView
+			android:id="@+id/log_view"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_margin="10dp"
+			android:scrollbars="vertical"
+			android:textIsSelectable="true"
+			android:text="">
+		</TextView>
+	</LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>
